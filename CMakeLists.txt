@@ -7,3 +7,4 @@ project ("snerp")
 
 # Include sub-projects.
 add_subdirectory ("snerp")
+add_subdirectory ("third-party/SDL-mirror")
