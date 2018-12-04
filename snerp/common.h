@@ -15,3 +15,21 @@
 	abort(); \
   } \
 } while (0)
+
+
+#define TRACE_ERROR 0
+#define TRACE_WARNING 1
+#define TRACE_INFO 2
+#define TRACE_DEBUG 3
+#define TRACE_SPAM 4
+
+#define TRACE_LEVEL TRACE_INFO
+
+#define TRACE(level, ...) \
+do { \
+  if ((level) <= TRACE_LEVEL) { \
+    printf("%s %s:%d - ", #level, __FILE__, __LINE__); \
+    printf(__VA_ARGS__); \
+    printf("\n"); \
+  } \
+} while (0)
