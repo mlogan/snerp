@@ -6,6 +6,7 @@ cmake_minimum_required (VERSION 3.8)
 # Add source to this project's executable.
 add_executable (snerp WIN32 
   "console.cpp" "console.h" 
+  "window.cpp" "window.h"
   "snerp.cpp" "snerp.h")
 target_link_libraries(snerp SDL2main SDL2-static)
 
